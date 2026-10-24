@@ -182,6 +182,72 @@ button {
 <strong>ملاحظة | Hinweis</strong><p>هذا مدخل تعليمي مختصر وليس وصفًا كاملًا لكل فرائض الصلاة وسننها. سنضيف لاحقًا النصوص العربية الدقيقة، والتشهد، والفروق بين الصلاة السرية والجهرية، وأحكام الإمام والمأموم.</p><p>Dies ist eine kurze Einführung, keine vollständige Darstellung aller Pflichten und Sunnas. Die genauen arabischen Texte und weitere Einzelheiten ergänzen wir später.</p>
 </div>
 </section>
+ <section id="salah-learning" style="background:#fffdf6;color:#174d39;padding:20px;margin:20px 0;border-radius:18px;line-height:1.9;">
+<h2 style="text-align:center;">🕌 الصلاة | Das Gebet</h2>
+<p style="text-align:center;">تعلم الصلاة وفق المذهب المالكي</p>
+<p style="text-align:center;">Das Gebet nach der malikitischen Rechtsschule</p>
+
+<details open style="padding:12px;border:1px solid #d9e6d8;border-radius:12px;margin:12px 0;">
+<summary style="font-weight:bold;cursor:pointer;">1. التشهد | Tashahhud</summary>
+<p dir="rtl" style="font-size:20px;text-align:right;">التحيات لله، الزاكيات لله، الطيبات الصلوات لله، السلام عليك أيها النبي ورحمة الله وبركاته، السلام علينا وعلى عباد الله الصالحين، أشهد أن لا إله إلا الله وحده لا شريك له، وأشهد أن محمداً عبده ورسوله.</p>
+<p><strong>Deutsch:</strong> Die ehrenden, reinen und guten Worte sowie die Gebete gehören Allah. Friede sei mit dir, o Prophet, und Allahs Barmherzigkeit und Segen. Friede sei mit uns und den rechtschaffenen Dienern Allahs. Ich bezeuge, dass es keinen Gott außer Allah gibt, allein und ohne Partner, und ich bezeuge, dass Muhammad Sein Diener und Gesandter ist.</p>
+<p style="font-size:14px;">هذا لفظ مشهور في المذهب المالكي؛ توجد اختلافات يسيرة في ألفاظ التشهد في الروايات.</p>
+</details>
+
+<details open style="padding:12px;border:1px solid #d9e6d8;border-radius:12px;margin:12px 0;">
+<summary style="font-weight:bold;cursor:pointer;">2. الصلوات الخمس | Die fünf Gebete</summary>
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;text-align:center;">
+<tr style="background:#e5f2e9;"><th style="padding:8px;">الصلاة</th><th style="padding:8px;">الركعات المفروضة</th><th style="padding:8px;">القراءة</th></tr>
+<tr><td style="padding:8px;">الفجر<br>Fadschr</td><td>2</td><td>جهرية<br>laut</td></tr>
+<tr><td style="padding:8px;">الظهر<br>Zuhr</td><td>4</td><td>سرية<br>leise</td></tr>
+<tr><td style="padding:8px;">العصر<br>Asr</td><td>4</td><td>سرية<br>leise</td></tr>
+<tr><td style="padding:8px;">المغرب<br>Maghrib</td><td>3</td><td>أول ركعتين جهراً<br>erste 2 laut</td></tr>
+<tr><td style="padding:8px;">العشاء<br>Ischa</td><td>4</td><td>أول ركعتين جهراً<br>erste 2 laut</td></tr>
+</table>
+</div>
+<p>في الظهر والعصر تكون القراءة سرية، وكذلك الركعة الثالثة من المغرب والركعتان الأخيرتان من العشاء.</p>
+<p>Bei Zuhr und Asr wird leise rezitiert. Ebenso in der dritten Rak'a von Maghrib und den letzten beiden Rak'a von Ischa.</p>
+<p style="font-size:14px;">هذه أعداد الركعات المفروضة فقط، ولا تشمل السنن والنوافل.</p>
+</details>
+
+<div style="padding:14px;border-radius:12px;background:#e5f2e9;margin-top:16px;">
+<h3>3. اختبر معلوماتك | Teste dein Wissen</h3>
+<p>اختر الإجابة الصحيحة لكل سؤال.</p>
+<p>Wähle für jede Frage die richtige Antwort.</p>
+
+<form id="salahQuiz">
+<p><strong>1. كم ركعة فرض في صلاة الفجر؟</strong><br>Wie viele Pflicht-Rak'a hat Fadschr?</p>
+<label><input type="radio" name="q1" value="0"> 3</label><br>
+<label><input type="radio" name="q1" value="1"> 2</label><br>
+<label><input type="radio" name="q1" value="0"> 4</label>
+
+<p><strong>2. أي صلاة فرضها أربع ركعات؟</strong><br>Welches Gebet hat vier Pflicht-Rak'a?</p>
+<label><input type="radio" name="q2" value="0"> المغرب / Maghrib</label><br>
+<label><input type="radio" name="q2" value="1"> العصر / Asr</label><br>
+<label><input type="radio" name="q2" value="0"> الفجر / Fadschr</label>
+
+<p><strong>3. كم ركعة فرض في المغرب؟</strong><br>Wie viele Pflicht-Rak'a hat Maghrib?</p>
+<label><input type="radio" name="q3" value="1"> 3</label><br>
+<label><input type="radio" name="q3" value="0"> 2</label><br>
+<label><input type="radio" name="q3" value="0"> 4</label>
+
+<p><strong>4. بماذا يبدأ التشهد؟</strong><br>Wie beginnt der Tashahhud?</p>
+<label><input type="radio" name="q4" value="1"> التحيات لله / At-tahiyyatu lillah</label><br>
+<label><input type="radio" name="q4" value="0"> الله أكبر / Allahu akbar</label><br>
+<label><input type="radio" name="q4" value="0"> سبحان ربي العظيم / Subhana rabbiyal-azim</label>
+
+<p><strong>5. أي الصلوات جهرية في ركعتيها؟</strong><br>Bei welchem Gebet wird in beiden Rak'a laut rezitiert?</p>
+<label><input type="radio" name="q5" value="1"> الفجر / Fadschr</label><br>
+<label><input type="radio" name="q5" value="0"> الظهر / Zuhr</label><br>
+<label><input type="radio" name="q5" value="0"> العصر / Asr</label>
+<br><br>
+<button type="button" onclick="(function(){var f=document.getElementById('salahQuiz');var s=0;for(var i=1;i<=5;i++){var a=f.querySelector('input[name=q'+i+']:checked');if(!a){document.getElementById('quizResult').textContent='أجب عن جميع الأسئلة أولاً. / Bitte beantworte zuerst alle Fragen.';return;}s+=Number(a.value);}document.getElementById('quizResult').textContent='النتيجة: '+s+' / 5 — '+(s===5?'أحسنت! / Sehr gut!':s>=3?'جيد، واصل التعلم! / Gut, weiter so!':'راجع الدرس وحاول مرة أخرى. / Wiederhole die Lektion und versuche es erneut.');})()" style="background:#176b4d;color:white;border:0;border-radius:9px;padding:12px 18px;font-size:16px;cursor:pointer;">تحقق من الإجابات | Antworten prüfen</button>
+<button type="reset" onclick="document.getElementById('quizResult').textContent=''" style="background:#e5f2e9;color:#174d39;border:0;border-radius:9px;padding:12px;margin:6px;cursor:pointer;">إعادة الاختبار | Zurücksetzen</button>
+<p id="quizResult" aria-live="polite" style="font-weight:bold;"></p>
+</form>
+</div>
+</section>
 </body>
 
 </html>
