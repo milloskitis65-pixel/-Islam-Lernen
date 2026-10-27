@@ -413,110 +413,86 @@ button {
     </p>
   </div>
 </details>
-      <!-- Wissenstest -->
-      <details style="background:#FFFCF6; border:1px solid #E4D8C5; border-radius:10px; padding:12px; margin:10px 0;">
-        <summary style="color:#315640; font-weight:bold; cursor:pointer;">
-          📝 Kleiner Wissenstest — اختبار صغير
-        </summary>
+      
+<!-- Wissenstest -->
+<details style="background:#FFFCF6; border:1px solid #E4D8C5; border-radius:10px; padding:12px; margin:10px 0;">
+  <summary style="color:#315640; font-weight:bold; cursor:pointer;">
+    📝 Kleiner Wissenstest — اختبار صغير
+  </summary>
 
-        <div style="padding-top:10px;">
-          <p>Wähle bei jeder Frage eine Antwort aus.</p>
+  <div style="padding-top:10px;">
+    <p>Wähle bei jeder Frage eine Antwort aus.</p>
 
-          <form id="islam-pillars-quiz">
+    <form id="islam-pillars-quiz">
+      <p><strong>1. Wie viele Säulen hat der Islam?</strong></p>
+      <label><input type="radio" name="p1" value="a"> Drei</label><br>
+      <label><input type="radio" name="p1" value="b"> Fünf</label><br>
+      <label><input type="radio" name="p1" value="c"> Sieben</label>
 
-            <p><strong>1. Wie viele Säulen hat der Islam?</strong></p>
-            <label><input type="radio" name="p1" value="a"> Drei</label><br>
-            <label><input type="radio" name="p1" value="b"> Fünf</label><br>
-            <label><input type="radio" name="p1" value="c"> Sieben</label>
+      <p><strong>2. Wann fasten Muslime verpflichtend?</strong></p>
+      <label><input type="radio" name="p2" value="a"> Im Ramadan, wenn sie dazu verpflichtet sind</label><br>
+      <label><input type="radio" name="p2" value="b"> Jeden Tag des Jahres</label><br>
+      <label><input type="radio" name="p2" value="c"> Nur am Freitag</label>
 
-            <p><strong>2. Wann fasten Muslime verpflichtend?</strong></p>
-            <label><input type="radio" name="p2" value="a"> Im Ramadan, wenn sie dazu verpflichtet sind</label><br>
-            <label><input type="radio" name="p2" value="b"> Jeden Tag des Jahres</label><br>
-            <label><input type="radio" name="p2" value="c"> Nur am Freitag</label>
+      <p><strong>3. Was ist die Zakat?</strong></p>
+      <label><input type="radio" name="p3" value="a"> Eine freiwillige Reise</label><br>
+      <label><input type="radio" name="p3" value="b"> Eine Pflichtabgabe bei erfüllten Bedingungen</label><br>
+      <label><input type="radio" name="p3" value="c"> Ein zusätzliches Gebet</label>
 
-            <p><strong>3. Was ist die Zakat?</strong></p>
-            <label><input type="radio" name="p3" value="a"> Eine freiwillige Reise</label><br>
-            <label><input type="radio" name="p3" value="b"> Eine Pflichtabgabe bei erfüllten Bedingungen</label><br>
-            <label><input type="radio" name="p3" value="c"> Ein zusätzliches Gebet</label>
+      <p><strong>4. Wann kann man freiwillig spenden?</strong></p>
+      <label><input type="radio" name="p4" value="a"> Nur im Ramadan</label><br>
+      <label><input type="radio" name="p4" value="b"> Nur wenn man reich ist</label><br>
+      <label><input type="radio" name="p4" value="c"> Zu verschiedenen Zeiten im Jahr</label>
 
-            <p><strong>4. Wann kann man freiwillig spenden?</strong></p>
-            <label><input type="radio" name="p4" value="a"> Nur im Ramadan</label><br>
-            <label><input type="radio" name="p4" value="b"> Nur wenn man reich ist</label><br>
-            <label><input type="radio" name="p4" value="c"> Zu verschiedenen Zeiten im Jahr</label>
+      <p><strong>5. Wann ist der Hadsch Pflicht?</strong></p>
+      <label><input type="radio" name="p5" value="a"> Einmal im Leben, wenn die Voraussetzungen erfüllt sind</label><br>
+      <label><input type="radio" name="p5" value="b"> Jedes Jahr für alle</label><br>
+      <label><input type="radio" name="p5" value="c"> Nur für Kinder</label>
 
-            <p><strong>5. Wann ist der Hadsch Pflicht?</strong></p>
-            <label><input type="radio" name="p5" value="a"> Einmal im Leben, wenn die Voraussetzungen erfüllt sind</label><br>
-            <label><input type="radio" name="p5" value="b"> Jedes Jahr für alle</label><br>
-            <label><input type="radio" name="p5" value="c"> Nur für Kinder</label>
+      <p><strong>6. Wie wird die Umra im malikitischen Madhhab beurteilt?</strong></p>
+      <label><input type="radio" name="p6" value="a"> Als bestätigte Sunna</label><br>
+      <label><input type="radio" name="p6" value="b"> Sie ersetzt den Hadsch</label><br>
+      <label><input type="radio" name="p6" value="c"> Sie ist eine tägliche Pflicht</label>
 
-            <p><strong>6. Wie wird die Umra im malikitischen Madhhab beurteilt?</strong></p>
-            <label><input type="radio" name="p6" value="a"> Als bestätigte Sunna</label><br>
-            <label><input type="radio" name="p6" value="b"> Sie ersetzt den Hadsch</label><br>
-            <label><input type="radio" name="p6" value="c"> Sie ist eine tägliche Pflicht</label>
+      <p style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button type="button" onclick="
+          const answers = {p1:'b', p2:'a', p3:'b', p4:'c', p5:'a', p6:'a'};
+          let score = 0;
+          let unanswered = 0;
 
-            <p style="margin-top:16px;">
-              <button type="button" onclick="
-                const answers = {p1:'b', p2:'a', p3:'b', p4:'c', p5:'a', p6:'a'};
-                let score = 0;
-                let unanswered = 0;
+          for (const q in answers) {
+            const selected = document.querySelector('#islam-pillars-quiz input[name=' + q + ']:checked');
+            if (!selected) {
+              unanswered++;
+            } else if (selected.value === answers[q]) {
+              score++;
+            }
+          }
 
-                for (const q in answers) {
-                  const selected = document.querySelector('#islam-pillars-quiz input[name=' + q + ']:checked');
-                  if (!selected) {
-                    unanswered++;
-                  } else if (selected.value === answers[q]) {
-                    score++;
-                  }
-                }
+          const result = document.getElementById('islam-pillars-result');
 
-                const result = document.getElementById('islam-pillars-result');
+          if (unanswered > 0) {
+            result.textContent = 'Bitte beantworte alle 6 Fragen. Noch offen: ' + unanswered + '.';
+          } else {
+            result.textContent = 'Du hast ' + score + ' von 6 Fragen richtig beantwortet! ' +
+              (score === 6 ? 'Sehr gut! 🌟' : 'Lerne weiter und versuche es noch einmal.');
+          }
+        " style="background:#315640; color:#FFFFFF; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
+          Antworten prüfen
+        </button>
 
-                if (unanswered > 0) {
-                  result.textContent = 'Bitte beantworte alle 6 Fragen. Noch offen: ' + unanswered + '.';
-                } else {
-                  result.textContent = 'Du hast ' + score + ' von 6 Fragen richtig beantwortet! ' +
-                    (score === 6 ? 'Sehr gut! 🌟' : 'Lerne weiter und versuche es noch einmal.');
-                }
-              " style="background:#315640; color:#FFFFFF; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
-                Antworten prüfen
-              </button>
-            </p>
+        <button type="button" onclick="
+          document.getElementById('islam-pillars-quiz').reset();
+          document.getElementById('islam-pillars-result').textContent = '';
+        " style="background:#E4D8C5; color:#315640; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
+          🔄 إعادة الاختبار | Zurücksetzen
+        </button>
+      </p>
 
-            <
-<p style="display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;">
-  <button type="button" onclick="
-    const answers = {p1:'b', p2:'a', p3:'b', p4:'c', p5:'a', p6:'a'};
-    let score = 0;
-    let unanswered = 0;
-
-    for (const q in answers) {
-      const selected = document.querySelector('#islam-pillars-quiz input[name=' + q + ']:checked');
-      if (!selected) {
-        unanswered++;
-      } else if (selected.value === answers[q]) {
-        score++;
-      }
-    }
-
-    const result = document.getElementById('islam-pillars-result');
-
-    if (unanswered > 0) {
-      result.textContent = 'Bitte beantworte alle 6 Fragen. Noch offen: ' + unanswered + '.';
-    } else {
-      result.textContent = 'Du hast ' + score + ' von 6 Fragen richtig beantwortet! ' +
-        (score === 6 ? 'Sehr gut! 🌟' : 'Lerne weiter und versuche es noch einmal.');
-    }
-  
-  <button type="button" onclick="
-    document.getElementById('islam-pillars-quiz').reset();
-    document.getElementById('islam-pillars-result').textContent = '';
-  " style="background:#E4D8C5; color:#315640; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
-    🔄 إعادة الاختبار | Zurücksetzen
-  </button>
-</p>
-
-<p id="islam-pillars-result" aria-live="polite" style="font-weight:bold; color:#315640;"></p>
-
+      <p id="islam-pillars-result" aria-live="polite" style="font-weight:bold; color:#315640;"></p>
+    </form>
+  </div>
+</details>
 
       <!-- Abschluss -->
       <div style="background:#FFFCF6; border:1px solid #E4D8C5; border-radius:10px; padding:12px; margin-top:14px;">
