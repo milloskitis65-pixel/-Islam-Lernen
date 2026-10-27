@@ -482,10 +482,44 @@ button {
               </button>
             </p>
 
-            <p id="islam-pillars-result" aria-live="polite" style="font-weight:bold; color:#315640;"></p>
-          </form>
-        </div>
-      </details>
+            <
+<p style="display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;">
+  <button type="button" onclick="
+    const answers = {p1:'b', p2:'a', p3:'b', p4:'c', p5:'a', p6:'a'};
+    let score = 0;
+    let unanswered = 0;
+
+    for (const q in answers) {
+      const selected = document.querySelector('#islam-pillars-quiz input[name=' + q + ']:checked');
+      if (!selected) {
+        unanswered++;
+      } else if (selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    const result = document.getElementById('islam-pillars-result');
+
+    if (unanswered > 0) {
+      result.textContent = 'Bitte beantworte alle 6 Fragen. Noch offen: ' + unanswered + '.';
+    } else {
+      result.textContent = 'Du hast ' + score + ' von 6 Fragen richtig beantwortet! ' +
+        (score === 6 ? 'Sehr gut! 🌟' : 'Lerne weiter und versuche es noch einmal.');
+    }
+  " style="background:#315640; color:#FFFFFF; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
+    Antworten prüfen
+  </button>
+
+  <button type="button" onclick="
+    document.getElementById('islam-pillars-quiz').reset();
+    document.getElementById('islam-pillars-result').textContent = '';
+  " style="background:#E4D8C5; color:#315640; border:0; border-radius:8px; padding:10px 14px; font-size:16px; cursor:pointer;">
+    🔄 إعادة الاختبار | Zurücksetzen
+  </button>
+</p>
+
+<p id="islam-pillars-result" aria-live="polite" style="font-weight:bold; color:#315640;"></p>
+
 
       <!-- Abschluss -->
       <div style="background:#FFFCF6; border:1px solid #E4D8C5; border-radius:10px; padding:12px; margin-top:14px;">
