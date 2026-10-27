@@ -166,66 +166,44 @@ button {
         </div>
       </details>
 
-      <details style="background:#FFFCF6; border:1px solid #E4D8C5; border-radius:10px; padding:12px; margin:10px 0;">
-        <summary style="color:#315640; font-weight:bold; cursor:pointer;">
-          📚 الحزب الراتب | Hizb Ratib
-        </summary>
-        <div style="padding-top:8px;">
-          <p dir="rtl" style="text-align:right;">
-            يداوم المركز على الحزب الراتب وفق الطريقة المغربية في التلاوة الجماعية للقرآن الكريم. وتكون القراءة قبل المغرب في الصيف، وبعد المغرب في الشتاء، بحسب البرنامج المعتمد في المركز.
-          </p>
-          <p>
-            Wir pflegen die marokkanische Tradition des Hizb Ratib. Im Sommer lesen wir vor dem Maghrib-Gebet, im Winter danach.
-          </p>
-
+     
 <!-- الحزب الراتب | Hizb Ratib -->
-<div class="mw-card" id="markaz-hizb-ratib">
+<section class="mw-card" id="markaz-hizb-ratib"
+  style="background:#FFFCF6;border:1px solid #E4D8C5;border-radius:12px;padding:14px;margin:12px 0;color:#315640;">
+
   <details>
-    <summary style="color:#315640;font-weight:bold;cursor:pointer;">
+    <summary style="font-size:18px;font-weight:bold;cursor:pointer;">
       📖 الحزب الراتب | Hizb Ratib
     </summary>
 
-    <div style="padding:12px;line-height:1.9;">
-      <p dir="rtl">
+    <div style="padding-top:12px;line-height:1.9;">
+
+      <p dir="rtl" style="text-align:right;">
+        يداوم المركز على الحزب الراتب وفق الطريقة المغربية في التلاوة الجماعية للقرآن الكريم.
+        وتكون القراءة قبل المغرب في الصيف، وبعد المغرب في الشتاء،
+        بحسب البرنامج المعتمد في المركز.
+      </p>
+
+      <p>
+        Wir pflegen die marokkanische Tradition des Hizb Ratib.
+        Im Sommer lesen wir vor dem Maghrib-Gebet, im Winter danach.
+      </p>
+
+      <p dir="rtl" style="text-align:right;">
         برنامج الحزب الراتب بمركز الإمام مالك.
         القراءة الجماعية وفق ترتيب البرنامج، مع قراءة سورة الكهف كل خميس.
       </p>
+
       <p>
         Gemeinschaftliche Koranlesung im Markaz Imam Malik.
         Jeden Donnerstag wird Sure Al-Kahf gelesen.
       </p>
 
-      <p dir="rtl">
-        <strong>الصيف:</strong> قبل صلاة المغرب.
-        <br>
-        <strong>الشتاء:</strong> بعد صلاة المغرب.
-      </p>
-
-      <
-<!-- الحزب الراتب | Hizb ar-Ratib -->
-<section id="hizb-ratib" style="background:#FFFCF6;border:1px solid #E4D8C5;border-radius:12px;padding:14px;margin:12px 0;color:#315640;">
-
-  <details>
-    <summary style="font-size:18px;font-weight:bold;cursor:pointer;">
-      📖 الحزب الراتب · Hizb ar-Ratib
-    </summary>
-
-    <div style="padding-top:12px;">
-      <p dir="rtl" style="text-align:right;line-height:1.9;">
-        برنامج الحزب الراتب بمركز الإمام مالك.
-        ترتيب القراءة ثابت، مع قراءة سورة الكهف يوم الخميس.
-      </p>
-
-      <p style="line-height:1.8;">
-        Der Wochenplan des Hizb ar-Ratib im Markaz Imam Malik.
-        Donnerstag ist für Sure Al-Kahf vorgesehen.
-      </p>
-
       <div style="background:#EAF0E6;border-radius:8px;padding:10px;margin:10px 0;">
         <p dir="rtl" style="margin:0;text-align:right;">
-          <strong>الصيف:</strong> قبل المغرب
+          <strong>الصيف:</strong> قبل صلاة المغرب
           <br>
-          <strong>الشتاء:</strong> بعد المغرب
+          <strong>الشتاء:</strong> بعد صلاة المغرب
         </p>
         <p style="margin:6px 0 0;">
           <strong>Sommer:</strong> vor Maghrib
@@ -233,8 +211,6 @@ button {
           <strong>Winter:</strong> nach Maghrib
         </p>
       </div>
-
-      <p id="hizb-current-date" style="font-weight:bold;text-align:center;"></p>
 
       <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;">
@@ -257,6 +233,7 @@ button {
       <p dir="rtl" style="font-size:13px;line-height:1.8;">
         تتجدد التواريخ تلقائيًا، مع الحفاظ على ترتيب البرنامج.
       </p>
+
     </div>
   </details>
 </section>
@@ -314,17 +291,10 @@ button {
   ];
 
   const tbody = document.getElementById("hizb-ratib-table");
-  const dateLabel = document.getElementById("hizb-current-date");
 
   function render() {
-    const today = new Date();
-    const todayMidnight = new Date(
-      today.getFullYear(), today.getMonth(), today.getDate()
-    );
-
     tbody.replaceChildren();
 
-    // عرض الدورة كاملة ابتداءً من تاريخ بدايتها.
     schedule.forEach(function (item, index) {
       const date = new Date(startDate);
       date.setDate(startDate.getDate() + index);
