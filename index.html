@@ -322,12 +322,6 @@ button {
       today.getFullYear(), today.getMonth(), today.getDate()
     );
 
-    dateLabel.textContent =
-      "Heute / اليوم: " +
-      todayMidnight.toLocaleDateString("de-DE", {
-        day: "2-digit", month: "long", year: "numeric"
-      });
-
     tbody.replaceChildren();
 
     // عرض الدورة كاملة ابتداءً من تاريخ بدايتها.
