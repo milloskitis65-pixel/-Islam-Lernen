@@ -1940,7 +1940,48 @@ quranLessons.forEach((lesson, index) => {
     });
     testArea.append(message, hideButton);
   });
-  content.append(arabic, german, button, testArea);
+  
+  const audioButton = document.createElement("button");
+  audioButton.type = "button";
+  audioButton.textContent = "🔊 استمع إلى التلاوة | Anhören";
+  audioButton.style.cssText =
+    "background:#E8EFE7;color:#315640;border:1px solid #C8D8C6;border-radius:9px;padding:10px 14px;font-size:15px;cursor:pointer;margin:8px 0;";
+
+  if (lesson.audio) {
+    const audio = document.createElement("audio");
+    audio.src = lesson.audio;
+    audio.preload = "none";
+    audio.style.display = "none";
+
+    audioButton.addEventListener("click", async () => {
+      try {
+        if (audio.paused) {
+          audioButton.textContent = "⏸ إيقاف مؤقت | Pause";
+          await audio.play();
+        } else {
+          audio.pause();
+          audioButton.textContent = "🔊 استمع إلى التلاوة | Anhören";
+        }
+      } catch (error) {
+        audioButton.textContent = "تعذّر التشغيل | Wiedergabe fehlgeschlagen";
+      }
+    });
+
+    audio.addEventListener("ended", () => {
+      audioButton.textContent = "🔊 استمع إلى التلاوة | Anhören";
+    });
+
+    audio.addEventListener("pause", () => {
+      if (audio.currentTime > 0 && !audio.ended) {
+        audioButton.textContent = "🔊 استمع إلى التلاوة | Anhören";
+      }
+    });
+
+    content.append(arabic, german, audioButton, audio, button, testArea);
+  } else {
+    content.append(arabic, german, button, testArea);
+  }
+
   card.append(summary, content);
   quranList.append(card);
 });
